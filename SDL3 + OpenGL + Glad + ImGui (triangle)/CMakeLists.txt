@@ -48,8 +48,12 @@ add_subdirectory(thirdparty/SDL EXCLUDE_FROM_ALL)
 # MY_SOURCES is defined to be a list of all the source files for my game 
 # DON'T ADD THE SOURCES BY HAND, they are already added with this macro
 file(GLOB_RECURSE MY_SOURCES CONFIGURE_DEPENDS "${CMAKE_CURRENT_SOURCE_DIR}/src/*.cpp")
-file(GLOB_RECURSE IMGUI_SOURCE_FILES imgui_impl_opengl3.cpp imgui_impl_SDL3.cpp imgui.cpp imgui_draw.cpp imgui_tables.cpp imgui_widgets.cpp)
-file(GLOB_RECURSE IMGUI_HEADER_FILES imgui_impl_opengl3.h imgui_impl_SDL3.h imgui.h imconfig.h imgui_internal.h imstb_rectpack.h imstb_textedit.h imstb_truetype.h)
+file(GLOB_RECURSE IMGUI_SOURCE_FILES imgui_impl_opengl3.cpp
+									 imgui_impl_SDL3.cpp imgui.cpp imgui_draw.cpp
+									 imgui_tables.cpp imgui_widgets.cpp imgui_demo.cpp)
+file(GLOB_RECURSE IMGUI_HEADER_FILES imgui_impl_opengl3.h
+									 imgui_impl_SDL3.h imgui.h imconfig.h imgui_internal.h
+									 imstb_rectpack.h imstb_textedit.h imstb_truetype.h)
 
 add_executable("${CMAKE_PROJECT_NAME}")
 
